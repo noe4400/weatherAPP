@@ -40,7 +40,7 @@ This will install all the dependencies defined in `package.json`.
 
 ### 3. Configure the env variables
 
-You need to add a .env file that includes the following
+You need to add a .env file at the root of project that must includes the following
 
 ```js
 EXPO_PUBLIC_PLACES_URL= #here goes the api for searching places
