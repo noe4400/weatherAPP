@@ -1,2 +1,3 @@
 import { AssetReturnType } from './assets';
-export { AssetReturnType };
+import { Place } from './place_types';
+export { AssetReturnType, Place };
