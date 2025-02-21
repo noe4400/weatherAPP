@@ -11,7 +11,7 @@ import { Button, Card, MD3Colors, ProgressBar } from 'react-native-paper';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import ScreenBg from '@/components/ScreenBg';
 import { BlurView } from 'expo-blur';
-import { converUnixDateToLocal, getCardStyle } from '@/utils/converstion';
+import { converUnixDateToLocal, getCardStyle } from '@/utils/convertions';
 import WeatherIcon from '@/components/WeatherIcon';
 import { useWeatherForecast } from '@/hooks';
 
