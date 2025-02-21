@@ -1,50 +1,66 @@
-# Welcome to your Expo app 👋
+# Weather App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple weather app built using React Native with Expo. The app fetches weather data from OpenWeather API and displays the current weather and forecasts. You can run this app with Expo Go on your mobile device.
 
-## Get started
+## Prerequisites
 
-1. Install dependencies
+Before starting, make sure you have the following installed:
 
-   ```bash
-   npm install
-   ```
+- **Node.js**: [Download Node.js](https://nodejs.org/)
+- **Expo CLI**: You can install it globally by running the command:
 
-2. Start the app
+  ```bash
+  npm install -g expo-cli
+  ```
 
-   ```bash
-    npx expo start
-   ```
+- **Expo Go App**: Available on both the [App Store](https://apps.apple.com/us/app/expo-go/id982107779) (iOS) and [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US) (Android).
 
-In the output, you'll find options to open the app in a
+- **OpenWeather API Key**: Sign up at [OpenWeather](https://openweathermap.org/) and get an API key to fetch weather data.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Getting Started
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 1. Clone the Repository
 
-## Get a fresh project
-
-When you're ready, run:
+Start by cloning this repository to your local machine:
 
 ```bash
-npm run reset-project
+git git@github.com:noe4400/weatherAPP.git
+cd weatherAPP
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install Dependencies
 
-## Learn more
+Install the required dependencies by running:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+This will install all the dependencies defined in `package.json`.
 
-## Join the community
+### 3. Configure the env variables
 
-Join our community of developers creating universal apps.
+You need to add a .env file that includes the following
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```js
+EXPO_PUBLIC_PLACES_URL= #here goes the api for searching places
+EXPO_PUBLIC_API_KEY= #api key from openweathermap
+EXPO_PUBLIC_WEATHER_API_URL= #openweathermap api base url ie https://api.openweathermap.org/data/3.0/onecall
+```
+
+### 4. Run the App with Expo Go
+
+Now that everything is set up, you can run the app with Expo Go. Run the following command:
+
+```bash
+npm run start
+```
+
+This will start the development server and display a QR code in your terminal. You can scan this QR code using the **Expo Go** app on your mobile device to run the app instantly.
+
+Alternatively, you can press `w` to open the app in a web browser or press `a` to open it in an Android simulator (if set up).
+
+### 5. App Features
+
+- Shows the forecast for the upcoming days.
+- Uses the **OpenWeather API** to fetch weather data.
