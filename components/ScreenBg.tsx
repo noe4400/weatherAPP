@@ -5,12 +5,13 @@ import { AssetReturnType } from '@/types';
 type ScreenBg = {
   source: AssetReturnType;
   children: React.ReactNode;
+  overlay?: boolean;
 };
 
-const ScreenBg = ({ source, children }: ScreenBg) => {
+const ScreenBg = ({ source, children, overlay = true }: ScreenBg) => {
   return (
     <ImageBackground style={styles.backgroundImage} source={source}>
-      <View style={styles.overlay}>{children}</View>
+      <View style={overlay ? styles.overlay : {}}>{children}</View>
     </ImageBackground>
   );
 };

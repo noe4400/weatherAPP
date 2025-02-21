@@ -4,7 +4,7 @@ import { List, MD3Colors, ProgressBar, Searchbar } from 'react-native-paper';
 import { FlatList, Text, TouchableOpacity } from 'react-native';
 import ScreenBg from '@/components/ScreenBg';
 import { router } from 'expo-router';
-import useSearchPlaces from '@/hooks';
+import { useSearchPlaces } from '@/hooks';
 
 const search = () => {
   const { searchQuery, handleSearchChange, places, isLoading, cleanSearchHandler } =
@@ -44,7 +44,12 @@ const search = () => {
               onPress={() =>
                 router.push({
                   pathname: '/weather',
-                  params: { lat: item.lat, long: item.long },
+                  params: {
+                    lat: item.lat,
+                    long: item.long,
+                    city: item.city_name,
+                    country: item.country,
+                  },
                 })
               }
             >
